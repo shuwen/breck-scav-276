@@ -1,0 +1,7 @@
+interface BarProps {
+
+}
+
+interface BarState {
+
+}

@@ -1,0 +1,6 @@
+:local .progress-bar {
+	background-color: #ccc;
+	border-radius: 1000px;
+	display: inline-block;
+	padding: 0 36px;
+}

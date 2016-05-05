@@ -1,0 +1,38 @@
+:local .segment {
+	display: inline-block;
+	font-size: 64px;
+	left: -8px;
+	line-height: 64px;
+	margin-right: -16px;
+	position: relative;
+	top: -17px;
+}
+
+:local .segment span {
+	background-color: #eb3122;
+	position: relative;
+	padding: 0 8px;
+}
+
+:local .segment::before,
+:local .segment::after {
+	content: ' ';
+	display: inline-block;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: 20px;
+	width: 0;
+}
+
+:local .segment::before {
+	border-bottom: 87px solid #eb3122;
+	border-left: 22px solid transparent;
+	top: 23px;
+}
+
+:local .segment::after {
+	border-top: 84px solid #eb3122;
+	border-right: 22px solid transparent;
+}
