@@ -4,6 +4,10 @@
 	padding: 0;
 }
 
+:global body {
+	background-color: #2C3E50;
+}
+
 :local .container {
 	text-align: center;
 }

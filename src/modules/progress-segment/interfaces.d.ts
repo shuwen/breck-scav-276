@@ -1,7 +1,8 @@
 interface SegState {
-	active: boolean
 }
 
 interface SegProps {
-
+	index: number
+	completion: string
+	label: string
 }

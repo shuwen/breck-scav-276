@@ -3,7 +3,6 @@
 import React = require('react');
 import ReactDOM = require('react-dom');
 import { ProgressBar } from './modules/progress-bar/progress-bar';
-import { ProgressSegment } from './modules/progress-segment/progress-segment';
 import { Carousel } from './modules/carousel/carousel';
 import { HeaderBar } from './modules/header-bar/header-bar';
 
@@ -19,11 +18,9 @@ interface AppState {
 
 class App extends React.Component<AppProps, AppState> {
 	private stages: string[];
-	private currentStage: number;
 
 	constructor(props: AppProps) {
 		super(props);
-		this.currentStage = 0;
 		this.render = this.render.bind(this);
 	}
 
@@ -31,17 +28,18 @@ class App extends React.Component<AppProps, AppState> {
 		return (
 			<div className={css['container']}>
 				<HeaderBar>
-					<h1>Scav Tracker</h1>
+					<h1>Scav Tracker <small>Nice!</small></h1>
 				</HeaderBar>
 
-				<ProgressBar>
-					{this.props.stages.map((segment, idx) =>
-						<ProgressSegment key={idx}>{idx}</ProgressSegment>
-					)}
-				</ProgressBar>
+				<ProgressBar stages={[
+					{label: "do a thing"},
+					{label: "do another thing"},
+					{label: "do third thing"},
+					{label: "do fourth thing"},
+					{label: "do fifth thing"}
+				]} />
 
 				<Carousel>
-					Cat facts
 				</Carousel>
 			</div>
 		);

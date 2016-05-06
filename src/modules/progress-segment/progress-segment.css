@@ -1,17 +1,17 @@
+:local .column {
+	display: inline-flex;
+	flex-direction: column;
+}
+
 :local .segment {
-	display: inline-block;
+	--segment-color: #eb3122;
+
 	font-size: 64px;
 	left: -8px;
 	line-height: 64px;
 	margin-right: -16px;
 	position: relative;
 	top: -17px;
-}
-
-:local .segment span {
-	background-color: #eb3122;
-	position: relative;
-	padding: 0 8px;
 }
 
 :local .segment::before,
@@ -27,12 +27,48 @@
 }
 
 :local .segment::before {
-	border-bottom: 87px solid #eb3122;
+	border-bottom: 87px solid var(--segment-color);
 	border-left: 22px solid transparent;
 	top: 23px;
 }
 
 :local .segment::after {
-	border-top: 84px solid #eb3122;
+	border-top: 84px solid var(--segment-color);
 	border-right: 22px solid transparent;
+}
+
+
+:local .label {
+	font-size: 12px;
+	margin-left: 22px;
+	text-align: center;
+}
+
+:local .index {
+	background-color: var(--segment-color);
+	position: relative;
+	padding: 0 14px;
+}
+
+
+/** Segment stages **/
+:local .complete {
+	--segment-color: #eb3122;
+}
+
+:local .active {
+	--segment-color: red;
+}
+
+:local .incomplete {
+	--segment-color: blue;
+}
+
+
+:local .label {
+
+}
+
+:local .index {
+
 }

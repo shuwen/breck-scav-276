@@ -13,8 +13,11 @@ export class ProgressSegment extends React.Component<SegProps, SegState> {
 
 	render() {
 		return (
-			<div className={css['segment']}>
-				<span>{this.props.children}</span>
+			<div className={css['column']}>
+				<div className={css['label']}>{this.props.label}</div>
+				<div className={css['segment'] + ' ' + css[this.props.completion]}>
+					<span className={css['index']}>{this.props.index}</span>
+				</div>
 			</div>
 		);
 	}
