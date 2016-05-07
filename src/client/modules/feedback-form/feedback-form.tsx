@@ -55,11 +55,12 @@ export class FeedbackForm extends React.Component<FormProps, FormState> {
 
 	render() {
 		return (
-			<form>
+			<form className={css['wrapper']}>
 				<h2>Help Us Get Better</h2>
-				<input type="text" name="name" value={this.state.name} onInput={this.handleNameInput}></input>
-				<textarea name="message" className={css['message']} value={this.state.message} onInput={this.handleMessageInput}></textarea>
-				<input type="button" onClick={this.postMessage} value="Send!"></input>
+				<em>Your feedback matters</em>
+				<input placeholder="Your Name" className={css['name']} type="text" name="name" value={this.state.name} onInput={this.handleNameInput}></input>
+				<textarea placeholder="Message" name="message" className={css['message']} value={this.state.message} onInput={this.handleMessageInput}></textarea>
+				<input className={css['submit']} type="button" onClick={this.postMessage} value="Send"></input>
 			</form>
 		);
 	}

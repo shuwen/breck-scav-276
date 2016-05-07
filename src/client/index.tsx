@@ -22,14 +22,14 @@ class App extends React.Component<AppProps, AppState> {
 	public render() {
 		return (
 			<div className={css['container']}>
-				<h1>Showcase Tracker</h1>
+				<h1>Showcase Tracker <small>(Item 82)</small></h1>
 
 				<ProgressBar stages={[
-					{label: "do a thing"},
-					{label: "do another thing"},
-					{label: "do third thing"},
-					{label: "do fourth thing"},
-					{label: "do fifth thing"}
+					{label: "Obtaining Contraband"},
+					{label: "Rigging Switches"},
+					{label: "Rotating Board"},
+					{label: "Reticulating Door Splines"},
+					{label: "Out for Delivery"}
 				]} />
 
 				<h2></h2>

@@ -1,0 +1,53 @@
+:local .wrapper {
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3em;
+	width: 500px;
+	align-content: center;
+	align-items: center;
+}
+
+:local .wrapper h2 {
+	margin: 0;
+	padding: 0;
+}
+
+:local .wrapper em {
+	color: #999;
+	margin: 8px 0 1em;
+}
+
+:local .name {
+	display: block;
+	display: block;
+	width: 100%;
+	margin-bottom: 3px;
+	border: 1px solid #eee;
+	font-size: 14px;
+	padding: 3px 8px;
+}
+
+:local .message {
+	display: block;
+	width: 100%;
+	margin-bottom: 3px;
+	border: 1px solid #eee;
+	font-size: 14px;
+	height: 8em;
+	padding: 3px 8px;
+}
+
+:local .submit {
+	background: #375D81;
+	border: 1px solid #375D81;
+	color: #fff;
+	border-radius: 30px;
+	font-size: 14px;
+	font-family: 'Avenir Next', Avenir, sans-serif;
+	display: block;
+	width: 80px;
+	margin-top: 3px;
+	cursor: pointer;
+}
