@@ -1,4 +1,4 @@
-var SLACK_WEBHOOK_PATH = '/services/T16DD5Q0Z/B16LALC3C/V8xI2sBd9jw60o0BKXQr1cir';
+var SLACK_WEBHOOK_PATH = '';
 
 var express = require('express'),
 	app = express(),

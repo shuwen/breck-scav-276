@@ -2,7 +2,10 @@
 /// <reference path="./interfaces.d.ts"/>
 
 import React = require('react');
+import jQuery = require('jquery');
 var css = require<any>('./feedback-form.css');
+
+const SLACK_PROXY_URL = 'http://localhost:9000';
 
 export class FeedbackForm extends React.Component<FormProps, FormState> {
 	constructor(props: FormProps) {
@@ -30,15 +33,32 @@ export class FeedbackForm extends React.Component<FormProps, FormState> {
 	}
 
 	postMessage(e) {
-		console.log(this.state);
+		var body = JSON.stringify(this.state);
+		console.log(body);
+
+		jQuery.ajax({
+			method: 'POST',
+			url: SLACK_PROXY_URL,
+			data: body,
+			contentType: 'application/json; charset=utf-8',
+			dataType: 'json'
+		}).then(function(err, data) {
+			if(err) console.error(err);
+			else console.log(data);
+		});
+
+		this.setState({
+			name: '',
+			message: ''
+		});
 	}
 
 	render() {
 		return (
 			<form>
 				<h2>Help Us Get Better</h2>
-				<input type="text" name="name" onInput={this.handleNameInput}></input>
-				<textarea name="message" className={css['message']} onInput={this.handleMessageInput}></textarea>
+				<input type="text" name="name" value={this.state.name} onInput={this.handleNameInput}></input>
+				<textarea name="message" className={css['message']} value={this.state.message} onInput={this.handleMessageInput}></textarea>
 				<input type="button" onClick={this.postMessage} value="Send!"></input>
 			</form>
 		);

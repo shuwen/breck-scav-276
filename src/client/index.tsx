@@ -8,16 +8,12 @@ import { FeedbackForm } from './modules/feedback-form/feedback-form';
 var css = require<any>('./index.css');
 
 interface AppProps {
-	stages: string[]
 }
 
 interface AppState {
-	currentStage: number
 }
 
 class App extends React.Component<AppProps, AppState> {
-	private stages: string[];
-
 	constructor(props: AppProps) {
 		super(props);
 		this.render = this.render.bind(this);
@@ -44,8 +40,4 @@ class App extends React.Component<AppProps, AppState> {
 	}
 }
 
-ReactDOM.render(<App stages={[
-	'',
-	'',
-	''
-]}></App>, document.getElementById('mountpoint'));
+ReactDOM.render(<App></App>, document.getElementById('mountpoint'));
