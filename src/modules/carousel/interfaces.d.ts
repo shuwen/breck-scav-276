@@ -1,7 +1,0 @@
-interface CarouselProps {
-
-}
-
-interface CarouselState {
-
-}

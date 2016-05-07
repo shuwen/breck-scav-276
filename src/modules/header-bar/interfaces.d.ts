@@ -1,7 +1,0 @@
-interface HeaderProps {
-
-}
-
-interface HeaderState {
-
-}

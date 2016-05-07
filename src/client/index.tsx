@@ -3,8 +3,7 @@
 import React = require('react');
 import ReactDOM = require('react-dom');
 import { ProgressBar } from './modules/progress-bar/progress-bar';
-import { Carousel } from './modules/carousel/carousel';
-import { HeaderBar } from './modules/header-bar/header-bar';
+import { FeedbackForm } from './modules/feedback-form/feedback-form';
 
 var css = require<any>('./index.css');
 
@@ -27,9 +26,7 @@ class App extends React.Component<AppProps, AppState> {
 	public render() {
 		return (
 			<div className={css['container']}>
-				<HeaderBar>
-					<h1>Scav Tracker <small>Nice!</small></h1>
-				</HeaderBar>
+				<h1>Showcase Tracker</h1>
 
 				<ProgressBar stages={[
 					{label: "do a thing"},
@@ -39,8 +36,9 @@ class App extends React.Component<AppProps, AppState> {
 					{label: "do fifth thing"}
 				]} />
 
-				<Carousel>
-				</Carousel>
+				<h2></h2>
+
+				<FeedbackForm />
 			</div>
 		);
 	}

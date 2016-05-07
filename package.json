@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "body-parser": "^1.15.1",
     "css-loader": "^0.23.1",
+    "express": "^4.13.4",
     "style-loader": "^0.13.1",
     "ts-loader": "^0.8.2",
     "typescript": "^1.8.10",

@@ -22,6 +22,11 @@ export class ProgressBar extends React.Component<BarProps, BarState> {
 						key={idx}
 						index={idx+1}
 						label={segment.label}
+						cap={(() => {
+							if(idx === 0) return 'start';
+							else if(idx === this.props.stages.length-1) return 'end';
+							else return '';
+						})()}
 						completion={(() => {
 							if(idx < this.state.activeStage) return 'complete';
 							else if (idx === this.state.activeStage) return 'active';
