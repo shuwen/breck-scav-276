@@ -1,4 +1,4 @@
-var SLACK_WEBHOOK_PATH = '';
+var SLACK_WEBHOOK_PATH = '/services/T16DD5Q0Z/B16LALC3C/V8xI2sBd9jw60o0BKXQr1cir';
 
 var express = require('express'),
 	app = express(),
@@ -8,8 +8,15 @@ var express = require('express'),
 
 app.use(bodyParser.json());
 
+app.all('/', function(req, res, next) {
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Headers", "X-Requested-With");
+	next();
+});
 
 app.post('/', function(req, res) {
+	console.log(req.body);
+
 	if(req.body && req.body.name && req.body.message) {
 
 		var body = JSON.stringify({
@@ -37,6 +44,8 @@ app.post('/', function(req, res) {
 		req.write(body);
 		req.end();
 	}
+
+	res.send('');
 });
 
 app.listen(9000);
